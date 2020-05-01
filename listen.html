@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: Arial;}
+
+    .tab{
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .tab button{
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    .tab button:hover{
+      background-color: #ccc;
+    }
+
+    .tabcontent{
+      display: none;
+      padding: 6px 12px:
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    </style>
+    <title>편안하게 감상하기^^</title>
+  </head>
+  <body>
+<h1>탭을 선택하여 듣고 싶은 음악을 들으세요.</h1>
+  <p>유튜브 짱짱맨!! 전 페이지로 돌아가고 싶다면 <a href="frontpage.html">이 곳</a>을 눌러주세요.</p>
+
+  <div class="tab">
+    <button type="tablinks" onclick="openMusic(event, 'Chopin')">Frédéric Chopin</button>
+    <button type="tablinks" onclick="openMusic(event, 'Beethoven')">Ludwig van Beethoven</button>
+    <button type="tablinks" onclick="openMusic(event, 'Debussy')">Claude Debussy</button>
+  </div>
+
+  <div class="tabcontent" id="Chopin">
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9E6b3swbnWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      Nocturne No.9, Op.2 (1832)
+    </p>
+  </div>
+
+  <div class="tabcontent" id="Beethoven">
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_mVW8tgGY_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      Bagatelle No. 25 in A minor (WoO 59, Bia 515), Für Elise (1867)
+    </p>
+  </div>
+
+
+  <div class="tabcontent" id="Debussy">
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CvFH_6DNRCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      Suite bergamasque, 3. Clair de lune(1890)
+    </p>
+
+  </div>
+
+  <script>
+function openMusic(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+  </body>
+</html>

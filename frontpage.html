@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,
+    initial-sclae=1">
+    <style>
+      .collapsible{
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+      }
+      .active, .collapsible:hover{
+        background-color: #555;
+      }
+      .content{
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+      h2{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+      }
+      </style>
+    <title>BMC</title>
+    <link rel="stylesheet" href="front_index.css">
+  </head>
+  <body>
+    <h1>자유롭게 둘러보세요</h1>
+
+    <h2>카테고리</h2>
+      <button type="button" class="collapsible">음악에 대해서</button>
+      <div class="content">
+        <p>음악이란 무엇인가</p>
+        <p>음악의 역사</p>
+        <p>음악을 즐기는 법</p>
+      </div>
+      <button type="button" class="collapsible">클래식 음악</button>
+      <div class="content">
+        <p>클래식 음악의 역사</p>
+        <p>바이올린</p>
+        <p>피아노</p>
+        <p><a href="opera.html">오페라</a></p>
+      </div>
+      <button type="button" class="collapsible">Etc</button>
+      <div class="content">
+        <p>유명한 인물들</p>
+        <p><a href="listen.html">음악감상</a></p>
+      </div>
+
+      <h2>간단한 Q&A</h2>
+        <button type="button" class="collapsible">이곳은 어떤 사이트인가요?</button>
+        <div class="content">
+          <p>이곳은 클래식 관련 정보를 모아둔 사이트입니다. 바이올린, 오페라, 피아노 등과 관련한 정보를 <strong>개인이</strong> 운영하고 있습니다.</p>
+        </div>
+        <button type="button" class="collapsible">Biblioteca di Musica Classica는 무슨 뜻인가요?</button>
+        <div class="content">
+          <p>이탈리아어로 클래식 음악의 도서관이라는 뜻입니다. 음악은 고대 인류가 탄생하고 나서 같이 존재해왔습니다. 흔히 서양음악이라고 불리는
+          클래식의 시작은 중세로 거슬러 올라가는데 로마 시대부터 존재해 온 가톨릭과 함께 폭발적으로 성장하게 되었습니다. 그렇기에 클래식의
+          본질은 이탈리아(정확히는 로마)에서 부터 시작되었다고 생각하여 이탈리아어로 이름을 짓게 되었습니다.</p>
+        </div>
+        <button type="button" class="collapsible">사이트가 너무 허접해요.</button>
+        <div class="content">
+          <p>제작자가 html과 css를 배운지 4일 밖에 되지 않은 <strong>뉴비</strong>라서 그렇습니다. 하나하나 개선할 수 있도록 노력하겠습니다.</p>
+        </div>
+
+        <p><a href="index.html">대문으로 돌아가기</a></p>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+      });
+    }
+    </script>
+
+  </body>
+</html>
